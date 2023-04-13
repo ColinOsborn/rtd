@@ -1,5 +1,4 @@
 class Todo extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -63,28 +62,30 @@ class TodoList extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { todos: [
-      {
-        _id: 1,
-        text: 'Item 1',
-        done: true
-      },
-      {
-        _id: 2,
-        text: 'Item 2',
-        done: false
-      },
-      {
-        _id: 3,
-        text: 'Item 3',
-        done: false
-      },
-      {
-        _id: 4,
-        text: 'Item 4',
-        done: false
-      }
-    ] };
+    this.state = {
+      todos: [
+        {
+          _id: 1,
+          text: "Item 1",
+          done: true,
+        },
+        {
+          _id: 2,
+          text: "Item 2",
+          done: false,
+        },
+        {
+          _id: 3,
+          text: "Item 3",
+          done: false,
+        },
+        {
+          _id: 4,
+          text: "Item 4",
+          done: false,
+        },
+      ],
+    };
     this.newTodo = this.newTodo.bind(this);
   }
 
@@ -92,10 +93,10 @@ class TodoList extends React.Component {
     event.preventDefault();
 
     todos = this.state.todos;
-    todos.push({_id: "" });
+    todos.push({ _id: "" });
 
-    this.setState(state => ({
-      todos: todos
+    this.setState((state) => ({
+      todos: todos,
     }));
   }
 
@@ -108,7 +109,9 @@ class TodoList extends React.Component {
       <React.Fragment>
         <h1>React To Do App</h1>
         {todoList}
-        <a href="#" onClick={this.newTodo}>New ToDo</a>
+        <a href="#" onClick={this.newTodo}>
+          New ToDo
+        </a>
       </React.Fragment>
     );
   }

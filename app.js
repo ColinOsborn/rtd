@@ -90,23 +90,25 @@ var TodoList = function (_React$Component2) {
 
     var _this2 = _possibleConstructorReturn(this, (TodoList.__proto__ || Object.getPrototypeOf(TodoList)).call(this, props));
 
-    _this2.state = { todos: [{
+    _this2.state = {
+      todos: [{
         _id: 1,
-        text: 'Item 1',
+        text: "Item 1",
         done: true
       }, {
         _id: 2,
-        text: 'Item 2',
+        text: "Item 2",
         done: false
       }, {
         _id: 3,
-        text: 'Item 3',
+        text: "Item 3",
         done: false
       }, {
         _id: 4,
-        text: 'Item 4',
+        text: "Item 4",
         done: false
-      }] };
+      }]
+    };
     _this2.newTodo = _this2.newTodo.bind(_this2);
     return _this2;
   }
