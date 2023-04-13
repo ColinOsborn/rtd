@@ -107,10 +107,25 @@ var TodoList = function (_React$Component2) {
         text: 'Item 4',
         done: false
       }] };
+    _this2.newTodo = _this2.newTodo.bind(_this2);
     return _this2;
   }
 
   _createClass(TodoList, [{
+    key: "newTodo",
+    value: function newTodo(event) {
+      event.preventDefault();
+
+      todos = this.state.todos;
+      todos.push({ _id: "" });
+
+      this.setState(function (state) {
+        return {
+          todos: todos
+        };
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var todoList = this.state.todos.map(function (todo) {
@@ -125,7 +140,12 @@ var TodoList = function (_React$Component2) {
           null,
           "React To Do App"
         ),
-        todoList
+        todoList,
+        React.createElement(
+          "a",
+          { href: "#", onClick: this.newTodo },
+          "New ToDo"
+        )
       );
     }
   }]);
